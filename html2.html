@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="theme-color" content="#f1f1f1" />
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="image/apple-touch-icon.webp" />
+    <title>CRY</title>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+      
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700&display=swap");
+
+:root {
+  --primaryColor: #91be55;
+  --secondaryColor: #73a942;
+  --black: #334;
+  --white: #fff;
+  --backgroundColor: #f1f1f1;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8.5rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: var(--white);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+}
+
+article {
+  padding: 8rem 9%;
+  background-color: var(--backgroundColor);
+}
+
+/* Header Style Start */
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #212121;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--white);
+  cursor: default;
+}
+.header .logo i {
+  padding-right: 0.5rem;
+  color: var(--primaryColor);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.header .logo i:hover {
+  transform: rotate(-360deg);
+  color: var(--white);
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: var(--white);
+  padding: 0.6rem 0.6rem;
+  font-weight: 450;
+}
+.header .navbar a:hover {
+  color: var(--white);
+  background: var(--primaryColor);
+  border-radius: 7px;
+}
+.header .icons .fas {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  text-align: center;
+  background: var(--primaryColor);
+}
+.header .icons .fas:hover {
+  color: var(--black);
+  transform: scale(1.2);
+  cursor: pointer;
+  background: var(--white);
+}
+
+.header .icons .menu-btn {
+  display: none;
+}
+/* Header Style End */
+
+/* Hero Style Start */
+.hero {
+  padding: 13rem 9%;
+  background-image: url("https://www.cry.org/wp-content/uploads/2016/10/School-The-Spark.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--backgroundColor);
+  content-visibility: auto;
+ margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.hero .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.hero .row .content {
+  flex: 1 1 50rem;
+}
+.hero .row .content h1 {
+  font-weight: 400;
+  font-size: 4.8rem;
+  color: var(--white);
+  line-height: 55px;
+}
+.hero .row .content .hero-text {
+  color: var(--white);
+  font-size: 1.5rem;
+  max-width: 500px;
+  margin: 20px 0 20px 0;
+}
+
+.hero .row .content .wrapper .btn-hero {
+  display: block;
+  width: 180px;
+  padding: 13px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  background: var(--primaryColor);
+}
+
+.hero .row .content .wrapper .btn-hero span {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .row .content .wrapper .btn-hero:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--white);
+  transition: all 0.35s;
+  border-radius: 8px;
+}
+
+.hero .row .content .wrapper .btn-hero:hover {
+  color: var(--black);
+}
+
+.hero .row .content .wrapper .btn-hero:hover:after {
+  width: 100%;
+}
+
+/* Hero Style End */
+
+/* About Style Start */
+.about {
+  background-color: var(--backgroundColor);
+  display: flex;
+  align-items: center;
+  padding-top: 140px;
+}
+
+.about .about-image {
+  flex-basis: 50%;
+  background-image: url("https://www.cry.org/wp-content/themes/cry/images/approach-main-banner-1.jpg");
+  min-height: 500px;
+  border-radius: 16px;
+  background-attachment: fixed;
+  background-position: -200px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content-visibility: auto;
+}
+
+.about .about-container {
+  flex-basis: 60%;
+  padding: 45px;
+}
+
+.about .about-container h1 {
+  font-weight: 400;
+  font-size: 4.8rem;
+  color: var(--black);
+  line-height: 55px;
+  margin-bottom: 18px;
+}
+
+.about .about-container p:nth-child(1) i {
+  margin-bottom: 5px;
+  position: relative;
+  font-size: 25px;
+  color: var(--primaryColor);
+}
+.about .about-container p:nth-child(1) {
+  margin-bottom: 5px;
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+
+.about .about-container p:nth-child(3) {
+  margin: 0 8px 0;
+  font-size: 16px;
+  color: var(--black);
+}
+.about .about-container .icons-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  color: var(--primaryColor);
+}
+
+.about .about-container .icons-container .icons {
+  background: var(--backgroundColor);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1 1 15rem;
+  padding: 1.5rem 1rem;
+}
+
+.about .about-container .icons-container .icons:hover {
+  color: var(--secondaryColor);
+  transform: scale(0.9);
+}
+
+.about .about-container .icons-container .icons i {
+  font-size: 2.5rem;
+  color: var(--primaryColor);
+}
+
+.about .about-container .icons-container .icons span {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+/* About Style End */
+
+/* Service Style Start*/
+
+.service-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.title .title-sub {
+  margin-bottom: 5px;
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+
+.title .title-description {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+p {
+  font-size: 16px;
+}
+.service-container .slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+}
+.service-container .slide-container .card {
+  background: var(--white);
+  border-radius: 8px;
+}
+
+.service-container .slide-container .card .image-box img {
+  margin-top: 10px;
+  width: 300px;
+  height: 200px;
+  border-radius: 8px 8px 0 0;
+}
+
+.service-container
+  .slide-container
+  .service-details-container
+  .service-details
+  h1 {
+  font-size: 18px;
+  font-weight: 800;
+  align-items: center;
+  text-align: center;
+  margin: 12px 0px;
+}
+.service-container
+  .slide-container
+  .service-details-container
+  .service-details
+  .service-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--black);
+  text-align: center;
+  margin: 10px 15px;
+}
+
+.service-container
+  .slide-container
+  .service-details-container
+  .service-details
+  .btn-service {
+  display: flex;
+  color: var(--white);
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 7px;
+  background: var(--primaryColor);
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.service-container
+  .slide-container
+  .service-details-container
+  .service-details
+  .btn-service:hover {
+  background: var(--backgroundColor);
+  color: var(--black);
+}
+
+.swiper-navBtn {
+  color: var(--white);
+  height: 40px;
+  width: 40px;
+  background: var(--primaryColor);
+  border-radius: 50%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  top: 63%;
+}
+.swiper-pagination-bullet {
+  background-color: var(--black);
+}
+
+/* Service Style End */
+
+/* Counter Style Start */
+.main-counter {
+  padding: 5.5rem 0px;
+}
+
+.main-counter .main-counter-container {
+  background: url("../image/counter-img.avif") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  content-visibility: auto;
+}
+
+.main-counter .main-counter-container .counter-up {
+  background: transparent;
+  min-height: 65vh;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.main-counter .main-counter-container .counter-up::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.main-counter .main-counter-container .counter-up .content {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-counter .main-counter-container .counter-up .content .box {
+  border: 1px solid #ccc;
+  width: calc(25% - 30px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+}
+.main-counter .main-counter-container .counter-up .content .box:hover {
+  transform: scale(1.1);
+}
+.main-counter .main-counter-container .content .box .icon {
+  font-size: 48px;
+  color: var(--white);
+}
+
+.main-counter .main-counter-container .content .box .counter {
+  font-size: 55px;
+  font-weight: 900;
+  color: var(--secondaryColor);
+  -webkit-text-stroke: 1px #ccc;
+}
+.main-counter .main-counter-container .content .box .counter-container {
+  display: flex;
+}
+.main-counter .main-counter-container .content .box .counter-container .plus {
+  font-size: 33px;
+  color: var(--secondaryColor);
+  -webkit-text-stroke: 1px #ccc;
+  font-weight: 900;
+}
+.main-counter .main-counter-container .content .box .text {
+  font-weight: 900;
+  font-size: 30px;
+  color: var(--white);
+}
+
+/* Counter Style End */
+
+/* Donation Style Start */
+.donate .donate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.donate .donate-container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.donate .donate-container .box-container .box {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.donate .donate-container .box-container .box:nth-child(1),
+.donate .donate-container .box-container .box:nth-child(2),
+.donate .donate-container .box-container .box:nth-child(3) {
+  display: inline-block;
+}
+
+.donate .donate-container .box-container .box .image {
+  margin-bottom: 20px;
+  overflow: hidden;
+  height: 250px;
+  border-radius: 5px;
+  content-visibility: auto;
+}
+
+.donate .donate-container .box-container .box .image img {
+  content-visibility: auto;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.donate .donate-container .box-container .box:hover .image img {
+  content-visibility: auto;
+  transform: scale(1.1);
+}
+
+.donate .donate-container .box-container .box .content h1 {
+  font-size: 20px;
+  color: var(--black);
+}
+
+.donate .donate-container .box-container .box .content p {
+  font-size: 13px;
+  color: var(--black);
+  line-height: 2;
+  padding: 15px 0;
+}
+
+.donate .donate-container .box-container .box .content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--black);
+}
+
+.donate .donate-container .box-container .box .content .icons span {
+  font-size: 16px;
+  color: var(--black);
+}
+
+.donate .donate-container .box-container .box .content .icons span i {
+  color: var(--primaryColor);
+  padding-right: 5px;
+}
+
+.donate .donate-container .box-container .box .content .btn-donate {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 1.4rem;
+  font-size: 16px;
+  cursor: pointer;
+  color: #f7f7f7;
+  background: var(--primaryColor);
+  border-radius: 5px;
+  font-weight: 450;
+}
+.donate .donate-container .box-container .box .content .btn-donate:hover {
+  background: var(--backgroundColor);
+  color: var(--black);
+}
+
+#load-more {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid var(--black);
+  color: var(--black);
+  font-size: 16px;
+  background-color: var(--white);
+  cursor: pointer;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+#load-more:hover {
+  background-color: var(--primaryColor);
+  border-color: var(--primaryColor);
+  color: var(--white);
+}
+
+/* Donation Style End */
+
+/* Contact Style Start */
+.contact {
+  display: flex;
+  padding: 25px 70px;
+}
+
+.contact-form,
+.contact-bio {
+  flex: 3;
+  padding: 10px 20px 0px;
+}
+
+.contact .contact-form .card h1 {
+  text-align: center;
+  padding-top: 30px;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 35px;
+  color: var(--black);
+}
+
+.contact .contact-form .card h1::after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 3px;
+  margin: auto;
+  background-color: var(--primaryColor);
+}
+
+.contact .contact-form .card .form-group {
+  margin: 8px 80px;
+}
+
+.contact .contact-form .card .form-group .contact-input {
+  width: 100%;
+  padding: 10px;
+  border-style: none;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+}
+.contact .contact-form .card .form-group .contact-textarea {
+  width: 100%;
+  padding: 10px;
+  border-style: none;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  height: 80px;
+}
+
+.contact .contact-form .card .form-group .label-contact {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 7px;
+  color: var(--black);
+}
+
+.contact .contact-form .card .btn-contact {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: var(--primaryColor);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--white);
+  border-radius: 7px;
+}
+
+.contact .contact-form .card .btn-contact:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.contact .contact-form .card .form-group p {
+  color: var(--black);
+  font-size: 14px;
+}
+.my-bio {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+}
+
+.my-bio .contact-bio {
+  text-align: center;
+}
+
+.my-bio .contact-bio .card {
+  padding: 10px 25px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  height: 90%;
+  border-radius: 10px;
+}
+
+.my-bio .contact-bio .card::after {
+  content: " ";
+  display: block;
+  height: 130px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--primaryColor);
+}
+
+.my-bio .contact-bio .card .profile-contact {
+  object-fit: cover;
+  height: 160px;
+  width: 160px;
+  margin-top: 30px;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.my-bio .contact-bio .card .name-bio {
+  font-size: 15px;
+}
+
+.my-bio .contact-bio .card .text-muted {
+  color: var(--black);
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.my-bio .contact-bio .card .table-container {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.my-bio .contact-bio .contact-bio .table-container .bio-table {
+  border-spacing: 0px;
+  width: auto;
+  border: 2px solid #f7f7f7;
+  margin-bottom: 55px;
+}
+
+tr,
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+/* Contact Style End */
+
+/* Countdown Style Start */
+.countdown-section {
+  padding: 60px 0;
+  background: url("../image/countdown-img.avif") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  content-visibility: auto;
+  color: #fff;
+}
+
+.countdown-section::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.container-countdown {
+  position: relative;
+}
+.countdown-section .section-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 19px;
+}
+.countdown-section .sub-heading {
+  font-size: 55px;
+  text-transform: uppercase;
+  margin: 20px 0px;
+}
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-timer-item {
+  margin: 0 20px;
+  text-align: center;
+  padding: 5px 25px;
+  border: 1px solid var(--white);
+  border-radius: 8px;
+}
+
+.countdown-timer-value {
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--primaryColor);
+  -webkit-text-stroke: 1px #ccc;
+}
+
+.countdown-timer-label {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
+  margin-top: 10px;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+}
+
+/* Countdown Style End */
+
+/* Footer Style Start */
+.footer {
+  bottom: 0px;
+  width: 100%;
+  background: #eee;
+  padding-top: 40px;
+}
+.footer .main-content-footer {
+  display: flex;
+  padding-top: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+}
+.footer .main-content-footer .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.footer .box h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.footer .box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.footer .box .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: var(--black);
+}
+.footer .box .content:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15%;
+  background: var(--primaryColor);
+  top: -10px;
+}
+.footer .left .content p {
+  text-align: justify;
+  font-size: 1.3rem;
+}
+.footer .left .content .social {
+  margin: 20px 0 0 0;
+}
+.footer .left .content .social a {
+  color: var(--white);
+  padding: 0 2px;
+}
+.footer .left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: var(--primaryColor);
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: var(--white);
+}
+.footer .left .content .social a span:hover {
+  background: var(--secondaryColor);
+  color: var(--black);
+  transform: scale(1.1);
+}
+.footer .center .content .fas {
+  font-size: 20px;
+  background: var(--primaryColor);
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  color: var(--white);
+}
+.footer .center .content .fas:hover {
+  background: var(--secondaryColor);
+  color: var(--black);
+}
+.footer .center .content .text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.footer .center .content .phone {
+  margin: 15px 0;
+}
+.footer .right form .text {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+  color: var(--black);
+}
+
+.footer .right form .msg {
+  margin-top: 10px;
+}
+.footer .right form input,
+.footer .right form textarea {
+  width: 100%;
+  font-size: 1.3rem;
+  background: var(--white);
+  padding-left: 10px;
+  border: 1px solid var(--black);
+  border-radius: 7px;
+}
+.footer .right form input:focus,
+.footer .right form textarea:focus {
+  outline-color: var(--white);
+  border: 2px solid var(--black);
+}
+.footer .right form input {
+  height: 35px;
+}
+.footer .right form .btn-member {
+  margin-top: 10px;
+}
+.footer .right form .btn-member button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: var(--primaryColor);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--white);
+  border-radius: 7px;
+}
+.footer .right form .btn-member button:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.footer .bottom {
+  text-align: center;
+  padding: 5px;
+  font-size: 1.6rem;
+  background: #eee;
+}
+.footer .bottom span {
+  color: var(--black);
+}
+.footer .bottom a {
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+.footer .bottom a:hover {
+  zoom: 110%;
+}
+
+.back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-size: 24px;
+  border-radius: 50%;
+  background: var(--secondaryColor);
+  color: var(--white);
+  padding: 5px 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.back-to-top-btn:hover {
+  background: var(--secondaryColor);
+}
+
+/* .footer  Style End */
+
+/* Responsive Start */
+@media (max-width: 1100px) {
+  .header {
+    padding: 3rem 4%;
+  }
+  .header .logo {
+    font-size: 18px;
+  }
+  .service-container .slide-container .card .image-box img {
+    margin-top: 10px;
+    width: 90%;
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+  }
+  .countdown-timer-item {
+    margin: 0 20px;
+    padding: 5px 25px;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header .navbar {
+    padding: 5px;
+  }
+  .header .logo {
+    font-size: 15px;
+  }
+  .header .logo i {
+    font-size: 19px;
+  }
+  .header .navbar a {
+    font-size: 17px;
+    margin: 0 4px;
+  }
+  .header .icons .fas {
+    width: 3.5rem;
+    font-size: 17px;
+  }
+
+  .main-counter .main-counter-container .counter-up {
+    padding: 50px 50px 0 50px;
+  }
+
+  .main-counter .main-counter-container .counter-up .content .box {
+    width: calc(50% - 30px);
+    margin: 30px 0px;
+  }
+
+  .main-counter .main-counter-container .content .box .counter {
+    font-size: 42px;
+  }
+
+  .main-counter .main-counter-container .content .box .counter-container .plus {
+    font-size: 30px;
+  }
+
+  .main-counter .main-counter-container .content .box .text {
+    font-size: 25px;
+  }
+
+  .service-container .slide-container .card .image-box img {
+    max-width: 90%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .contact {
+    display: block;
+  }
+  .contact .contact-form .card .form-group .label-contact {
+    font-size: 20px;
+  }
+  .contact .contact-form .card .form-group .contact-input {
+    font-size: 18px;
+  }
+  .contact .contact-form .card .form-group .contact-textarea {
+    font-size: 18px;
+  }
+  .my-bio .contact-bio .card .name-bio {
+    font-size: 25px;
+  }
+  .contact .contact-form .card .form-group {
+    margin: 10px 0px;
+  }
+  .my-bio .contact-bio .card .text-muted {
+    font-size: 19px;
+  }
+  .contact .my-bio {
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0;
+  }
+  tr,
+  th,
+  td {
+    font-size: 17px;
+  }
+
+  .countdown-section {
+    padding: 40px 0;
+  }
+  .countdown-section .sub-heading {
+    font-size: 45px;
+  }
+  .countdown-timer-item {
+    margin: 0 15px;
+    padding: 5px 20px;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+  }
+  .countdown-timer-value {
+    font-size: 40px;
+  }
+  .countdown-timer-label {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .footer {
+    position: relative;
+    bottom: 0px;
+  }
+  .footer .main-content-footer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer .main-content .box {
+    margin: 5px 0;
+  }
+  .footer .box h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #212121;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .logo {
+    font-size: 23px;
+  }
+  .header .logo i {
+    font-size: 23px;
+  }
+  .header .navbar a {
+    font-size: 2rem;
+    margin: 2rem;
+    display: block;
+  }
+  .header .icons .fas {
+    width: 4.5rem;
+    font-size: 2rem;
+  }
+  #menu-btn {
+    display: inline-block;
+  }
+  .about {
+    display: block;
+    padding: 160px 60px 0px;
+  }
+  .about .about-container {
+    margin-top: 25px;
+  }
+  .about .about-image {
+    background-position: 0px;
+    min-height: 400px;
+  }
+  .about .about-container h1 {
+    text-align: center;
+  }
+  .about .about-container p:nth-child(1) {
+    text-align: center;
+  }
+  .about .about-container p:nth-child(3) {
+    text-align: justify;
+  }
+
+  .service-container .slide-container .card .image-box img {
+    max-width: 90%;
+    max-height: 190px;
+    object-fit: cover;
+  }
+
+  .service-container
+    .slide-container
+    .service-details-container
+    .service-details
+    .btn-service {
+    font-size: 13px;
+    padding: 8px 0px;
+  }
+  .service-container
+    .slide-container
+    .service-details-container
+    .service-details
+    h1 {
+    font-size: 15px;
+  }
+  .service-container
+    .slide-container
+    .service-details-container
+    .service-details
+    .service-name {
+    font-size: 13px;
+  }
+
+  .main-counter .main-counter-container .counter-up {
+    min-height: 30vh;
+    padding-top: 50px;
+  }
+
+  .main-counter .main-counter-container .content .box .counter {
+    font-size: 30px;
+  }
+
+  .main-counter .main-counter-container .content .box .counter-container .plus {
+    font-size: 23px;
+  }
+
+  .main-counter .main-counter-container .content .box .text {
+    font-size: 18px;
+  }
+
+  .title .title-description {
+    font-size: 35px;
+  }
+
+  .donate .donate-container .box-container .box .content p {
+    padding: 15px 90px;
+    font-size: 16px;
+  }
+
+  .donate .donate-container .box-container .box .content h1 {
+    font-size: 24px;
+  }
+
+  .donate .donate-container .box-container .box .content .btn-donate {
+    padding: 1.2rem 4rem;
+  }
+
+  .donate .donate-container .box-container .box .content .icons span {
+    font-size: 19px;
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .contact .contact-form .card .form-group {
+    margin: 10px 0px;
+  }
+
+  .contact .my-bio {
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .countdown-section {
+    padding: 30px 0;
+  }
+  .countdown-section .sub-heading {
+    font-size: 30px;
+  }
+  .countdown-timer {
+    flex-wrap: wrap;
+  }
+  .countdown-timer-item {
+    margin: 10px 5px;
+    padding: 5px 15px;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+  }
+  .countdown-timer-value {
+    font-size: 30px;
+  }
+  .countdown-timer-label {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .footer .left .content .social {
+    text-align: center;
+  }
+
+  .footer .center .content .phone {
+    text-align: center;
+  }
+
+  .footer .center .content .place {
+    text-align: center;
+  }
+
+  .footer .center .content .email {
+    text-align: center;
+  }
+  .back-to-top-btn {
+    font-size: 20px;
+    padding: 8px;
+    bottom: 10px;
+    right: 10px;
+    padding: 4px 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about {
+    padding: 140px 10px 0px;
+  }
+
+  .about .about-image {
+    min-height: 350px;
+    margin: 0px 20px;
+  }
+
+  .about .about-container h1 {
+    font-size: 35px;
+  }
+
+  .about .about-container .icons-container {
+    margin-top: 10px;
+  }
+
+  .main-counter .main-counter-container .counter-up {
+    padding: 0px 30px;
+  }
+
+  .donate .donate-container .box-container .box .content p {
+    padding: 10px 2px;
+  }
+
+  .my-bio .contact-bio .card .name-bio {
+    font-size: 19px;
+  }
+
+  .my-bio .contact-bio .card .text-muted {
+    font-size: 16px;
+  }
+  tr,
+  th,
+  td {
+    font-size: 13px;
+  }
+  .back-to-top-btn {
+    font-size: 16px;
+    padding: 8px 10px;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header .icons .fas {
+    display: none;
+  }
+  #menu-btn {
+    font-size: 23px;
+  }
+  .hero .row .content h1 {
+    font-size: 33px;
+  }
+  .hero .row .content .hero-text {
+    font-size: 14px;
+  }
+  .about .about-image {
+    min-height: 280px;
+  }
+  .about .about-container p:nth-child(3) {
+    margin: 0px;
+    font-size: 14px;
+  }
+  .about .about-container h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .title .title-description {
+    font-size: 26px;
+  }
+
+  .main-counter .main-counter-container .counter-up {
+    padding: 30px 30px;
+  }
+  .service-container
+    .slide-container
+    .service-details-container
+    .service-details
+    h1 {
+    font-size: 19px;
+  }
+
+  .service-container
+    .slide-container
+    .service-details-container
+    .service-details
+    .service-name,
+  .service-container
+    .slide-container
+    .service-details-container
+    .service-details
+    .btn-service {
+    font-size: 15px;
+  }
+
+  .main-counter .main-counter-container .counter-up .content .box {
+    width: 100%;
+    margin: 15px 10px;
+  }
+
+  .main-counter .main-counter-container .content .box .text {
+    font-size: 21px;
+  }
+
+  .main-counter .main-counter-container .content .box .counter {
+    font-size: 38px;
+  }
+  .main-counter .main-counter-container .content .box .counter-container .plus {
+    font-size: 27px;
+  }
+  .donate .donate-container .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .donate .donate-container .box-container .box .content .btn-donate {
+    font-size: 17px;
+  }
+
+  .contact {
+    padding: 20px 35px;
+  }
+  .contact .contact-form .card h1 {
+    font-size: 26px;
+  }
+  .contact .contact-form .card .form-group .label-contact {
+    font-size: 17px;
+  }
+  .contact .contact-form .card .form-group .contact-input,
+  .contact .contact-form .card .form-group .contact-textarea {
+    font-size: 15px;
+  }
+  .my-bio .contact-bio .card .name-bio {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .my-bio .contact-bio .card .text-muted {
+    font-size: 13px;
+  }
+  tr,
+  th,
+  td {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .hero .row .content h1 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .header .logo,
+  .header .logo i,
+  #menu-btn {
+    font-size: 19px;
+  }
+  .about .about-image {
+    min-height: 200px;
+  }
+  .about .about-container {
+    padding: 18px;
+  }
+  .about .about-container h1 {
+    font-size: 23px;
+  }
+  .about .about-container p:nth-child(1),
+  .about .about-container p:nth-child(1) i {
+    font-size: 18px;
+  }
+  .about .about-container p:nth-child(3) {
+    font-size: 12px;
+  }
+  .header .navbar a {
+    margin: 6px 10px;
+    font-size: 15px;
+  }
+  .hero .row .content .hero-text {
+    font-size: 12px;
+  }
+  .hero .row .content .wrapper .btn-hero {
+    font-size: 15px;
+    padding: 10px 3px;
+  }
+  .title .title-description {
+    font-size: 21px;
+  }
+  .title .title-sub {
+    font-size: 18px;
+  }
+
+  .service-container .slide-container {
+    margin: 0px 10px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 60%;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: 0px;
+    left: auto;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: 0px;
+    right: auto;
+  }
+
+  .donate .donate-container .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .donate .donate-container .box-container .box {
+    padding: 10px;
+  }
+  .donate .donate-container .box-container .box .content h1 {
+    font-size: 19px;
+  }
+  .donate .donate-container .box-container .box .content p {
+    font-size: 12px;
+    padding: 5px 0px;
+  }
+  .donate .donate-container .box-container .box .content .btn-donate {
+    padding: 8px 8px;
+    font-size: 13px;
+  }
+  .donate .donate-container .box-container .box .content .icons span {
+    font-size: 12px;
+  }
+  #load-more {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .contact {
+    padding: 15px 23px;
+  }
+  .contact .contact-form .card h1 {
+    font-size: 21px;
+  }
+  .contact .contact-form .card .form-group .label-contact {
+    font-size: 14px;
+  }
+  .contact .contact-form .card .form-group .contact-input,
+  .contact .contact-form .card .form-group .contact-textarea {
+    font-size: 12px;
+  }
+
+  .contact-form,
+  .contact-bio {
+    padding: 0px;
+  }
+  .contact .contact-form .card .btn-contact {
+    font-size: 14px;
+  }
+  .my-bio .contact-bio .card .profile-contact {
+    width: 130px;
+    height: 130px;
+  }
+  .my-bio .contact-bio .card .name-bio {
+    font-size: 13px;
+  }
+  .my-bio .contact-bio .card .text-muted {
+    font-size: 12px;
+  }
+  tr,
+  th,
+  td {
+    font-size: 8px;
+  }
+  .footer .right form .btn-member button {
+    font-size: 13px;
+  }
+  .footer .bottom {
+    font-size: 12px;
+  }
+}
+
+/* Responsive End */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-image: url('https://www.cry.org/wp-content/uploads/2016/10/School-The-Spark.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    scroll-behavior: smooth;
+}header {
+    background-color: yellow;
+    color: white;
+    padding: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.active, .donate-now:hover {
+    background-color: yellow;
+    color: black;
+}
+footer {
+    background-color: #333;
+    color: Black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.contact-info {
+    margin: 20px 0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+}
+      </style>
+  <body>
+    <!-- Header Start -->
+    <header class="header">
+      <a href="#" class="logo"><i class=url("https://www.cry.org/wp-content/themes/cry/images/logo.gif")></i> CRY</a>
+      <nav class="navbar">
+        <a href="#home" aria-label="home">Home</a>
+        <a href="#about" aria-label="about">About</a>
+        <a href="#Our Approach" aria-label="service">Our Approach</a>
+        <a href="#donate" aria-label="donation">Donation</a>
+        <a href="#contact" aria-label="contact">Contact</a>
+      </nav>
+      <div class="icons">
+        <!-- Responsive Navbar -->
+        <div id="menu-btn" class="fas fa-bars menu-btn"></div>
+        <a
+          href="#search"
+          id="search-btn"
+          class="fas fa-search"
+          aria-label="search"
+        ></a>
+        <a
+          href="#donate"
+          class="fas fa-hand-holding-heart"
+          aria-label="donate-navbar"
+        ></a>
+        <a
+          href="#login"
+          id="login-btn"
+          class="fas fa-user"
+          aria-label="login"
+        ></a>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Back To Top Start -->
+    <button id="back-to-top-btn" class="back-to-top-btn">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+    <!-- Back To Top End -->
+
+    <!-- Main Content Start -->
+    <main>
+    <!-- Hero Start-->
+      <article class="hero" id="home">
+        <div class="row">
+          <div class="content">
+           
+            
+            <div class="wrapper">
+              <a href="#donate" class="btn-hero"
+                ><span
+                  ><i class="fa-solid fa-hand-holding-heart"></i> Donate
+                  Now!</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hero End -->
+
+      <!-- About Start -->
+      <article class="about">
+        <div class="about-image" id="about"></div>
+        <div class="about-container">
+          <p><i class="fa-solid fa-leaf"></i> Learn About Us</p>
+          <h1>Let’s ensure happy Childhoods for  children</strong></h1>
+          <p>Children have a right to be heard and their opinions considered by the adults around them. Every child should have the agency to speak out and/or act on the issues that affect them. It’s not only important for their mental and emotional development but also fosters a high degree of self esteem and self belief.
+
+We believe that all children have the potential to be agents of change and the ability to hold dialogue on the things that matter to them.
+
+CRY’s child participation programs focus on building children’s collectives as peer support groups and engaging with the children to build their awareness on child rights issues.
+
+          </p>
+          <div class="icons-container">
+            <div class="icons">
+              <i class="fa-solid fa-bowl-food"></i>
+              <span>Foods</span>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-droplet"></i>
+              <span>Water</span>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-briefcase-medical"></i>
+              <span>Medical</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- About End -->
+
+      <!-- Service Start  -->
+      <article class="Our Approach">
+        <div class="service-container swiper">
+          <div class="title" id="Our Approach">
+            <p class="title-sub">Our Approach</p>
+            <h1 class="title-description">
+              CRY works with project partners at the grassroots <br />
+             level to create sustainable change for India’s children
+            </h1>
+		<p> Our approach is modeled around bringing change at all levels
+With your support, we address children’s critical needs by working with parents, teachers, Anganwadi workers, communities, district and state level governments as well as the children themselves.
+We focus on changing behaviours and practices at the grassroots level and influencing public policy at a systemic level – thereby creating an ecosystem where children are made the nation’s priority.</p>
+          </div>
+          <div class="slide-container">
+            <div class="card-wrapper swiper-wrapper">
+              <div class="card swiper-slide">
+                <div class="image-box">
+                  <img src="https://www.cry.org/wp-content/themes/cry/images/about-team-banner.jpg"
+                    width="315"
+                    height="200"
+                    alt="Image"
+                    loading="lazy"
+                    fetchpriority="low"
+                  />
+                </div>
+                <div class="service-details-container">
+                  <div class="service-details">
+                    <h1>Our Advocacy Efforts</h1>
+                    <h2 class="service-name">
+                     we advocate for children’s rights at multiple levels and influence policy by engaging with key stakeholders in the government
+                    </h2>
+                    <a href="#service" class="btn-service">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image-box">
+                  <div class="w3-col m3">
+                 
+                </div>
+               
+              
+                
+              
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-pagination"></div>
+        </div>
+      </article>
+<!-- service end -->
+      <!-- Counter Start-->
+      <article class="main-counter" id="main-counter">
+        <div class="main-counter-container">
+          <div class="counter-up">
+            <div class="content">
+              <div class="box">
+                <div class="icon"><i class="fa-solid fa-earth-asia"></i></div>
+                <div class="counter-container">
+                  <div class="counter">120</div>
+                  <div class="plus">+</div>
+                </div>
+                <div class="text">Countries</div>
+              </div>
+              <div class="box">
+                <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+                <div class="counter-container">
+                  <div class="counter">1600</div>
+                  <div class="plus">+</div>
+                </div>
+                <div class="text">Volunteers</div>
+              </div>
+              
+              <div class="box">
+                <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
+                <div class="counter-container">
+                  <div class="counter">10000</div>
+                  <div class="plus">$</div>
+                </div>
+                <div class="text">Our Goal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Counter End -->
+
+      <!-- Donate Start -->
+      <article class="donate" id="donate-main">
+        <div class="donate-container">
+          <div class="title">
+            <p class="title-sub">Popular Causes</p>
+            <h1 class="title-description">
+              Let's know about charity causes <br />
+          
+            </h1>
+          </div>
+
+          <div class="box-container" id="donate">
+            <div class="box">
+              <div class="image">
+                <img
+                  src="https://www.cry.org/wp-content/themes/cry/images/impact-banner-2.jpg"
+                  alt="Image"
+                  loading="lazy"
+                  fetchpriority="high"
+                />
+              </div>
+              <div class="content">
+                <h1>Education</h1>
+                <p>
+                  Free And Compulsory Education For India’s Children
+                </p>
+                <a href="#donate" class="btn-donate" aria-label="donate button"
+                  >Donate Now</a
+                >
+               
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="image">
+                <img
+                  src="https://www.cry.org/wp-content/themes/cry/images/help-stop-child-labour-card.jpg"
+                  alt="Image"
+                  loading="lazy"
+                  fetchpriority="high"
+                />
+              </div>
+              <div class="content">
+                <h1>Stop Child Labour</h1>
+                <p>
+                   Help children go to school instead
+                </p>
+                <a href="#donate" class="btn-donate" aria-label="donate button"
+                  >Donate Now</a
+                >
+                
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="image">
+                <img
+                  src="https://cdn.givind.org/static/images/campaign/target-image1.jpg"
+                  alt="Image"
+                  loading="lazy"
+                  fetchpriority="high"
+                />
+              </div>
+              <div class="content">
+                <h1>Food</h1>
+                <p>
+                  Provide them the nutritional care
+                </p>
+                <a href="#donate" class="btn-donate" aria-label="donate button"
+                  >Donate Now</a
+                >
+                
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="image">
+                <img
+                  src="image/charity-img4.avif"
+                  alt="Image"
+                  loading="lazy"
+                  fetchpriority="low"
+                />
+              </div>
+              <div class="content">
+                <h1>Dog</h1>
+                <p>
+                  Let's save for Dog around the world. Today you can save them
+                  tomorrow may be too late
+                </p>
+                <a href="#donate" class="btn-donate" aria-label="donate button"
+                  >Donate Now</a
+                >
+                <div class="icons">
+                  <span> <i class="fas fa-calendar"></i> 30 Dec, 2023 </span>
+                  <span> <i class="fa-solid fa-dollar-sign"></i> 8500 </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="image">
+                <img
+                  src="image/charity-img5.avif"
+                  alt="Image"
+                  loading="lazy"
+                  fetchpriority="low"
+                />
+              </div>
+              <div class="content">
+                <h1>Cat</h1>
+                <p>
+                  Let's save for Cat around the world. Today you can save them
+                  tomorrow may be too late
+                </p>
+                <a href="#donate" class="btn-donate" aria-label="donate button"
+                  >Donate Now</a
+                >
+                <div class="icons">
+                  <span> <i class="fas fa-calendar"></i> 30 Dec, 2023 </span>
+                  <span> <i class="fa-solid fa-dollar-sign"></i> 7500 </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="image">
+                <img
+                  src="image/charity-img6.avif"
+                  alt="Image"
+                  loading="lazy"
+                  fetchpriority="low"
+                />
+              </div>
+              <div class="content">
+                <h1>Tiger</h1>
+                <p>
+                  Let's save for Tiger around the world. Today you can save them
+                  tomorrow may be too late
+                </p>
+                <a href="#donate" class="btn-donate" aria-label="donate button"
+                  >Donate Now</a
+                >
+                <div class="icons">
+                  <span> <i class="fas fa-calendar"></i> 30 Dec, 2023 </span>
+                  <span> <i class="fa-solid fa-dollar-sign"></i> 1500 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="load-more">Load More</div>
+        </div>
+      </article>
+      <!-- Donate End -->
+
+    
+
+      <article class="contact" id="contact">
+        <!-- Contact Start -->
+        <div class="contact-form">
+          <div class="card">
+            <h1>Donate Now</h1>
+            <form action="" method="POST">
+<div class="form-group">
+                <label class="label-contact" for="name">Name</label>
+                <input
+                  class="contact-input"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Name..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="label-contact" for="email">Email</label>
+                <input
+                  class="contact-input"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="label-contact" for="Mobile Number">Mobile Number</label>
+                <input
+                  class="contact-input"
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Mob Num..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message" class="label-contact">Address</label>
+                <textarea
+                  class="contact-textarea"
+                  name="message"
+                  id="message"
+                  cols="15"
+                  rows="10"
+                  placeholder="Your Message..."
+                  required
+                ></textarea>
+              </div>
+<div class="form-group">
+                <label class="label-contact" for="email">Amount</label>
+                <input
+                  class="contact-input"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Amount..."
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input type="button" value="Continue To Payment" class="btn-contact" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Contact End -->
+
+        <!-- My Bio Start -->
+        <aside class="my-bio">
+          <div class="contact-bio">
+            <div class="card">
+              <img
+                src="https://www.cry.org/wp-content/themes/cry/images/rippan.jpg"
+                alt="Thoriq Profile Photo"
+                class="profile-contact"
+                loading="lazy"
+                fetchpriority="low"
+              />
+              <h1 class="name-bio">Founder</h1>
+<h1 class="name-bio">Rippan Kapur</h1>
+              <p class="text-muted">
+               
+              </p>
+              <div class="table-container">
+                <table class="bio-table">
+                  <tbody>
+                    <tr>
+                      <th>Email</th>
+                      <td>rippankapur@gmail.com</td>
+                    </tr>
+                    
+                    <tr>
+                      <th>Motto</th>
+                      <td>Your mindset determines the quality of your life</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- My Bio End -->
+      </article>
+    </main>
+    <!-- Main Content End -->
+
+    <!-- Footer Start -->
+    <footer class="footer" id="footer">
+      <div class="main-content-footer">
+        <div class="left box">
+          <h2>About us</h2>
+          <div class="content">
+            <p>
+              Child Rights and You (CRY) is an Indian non-governmental organization (NGO) that works towards ensuring children's rights.
+      The organization was started in 1979 by Rippan Kapur, an Air India purser. CRY works with 99 grassroot projects across 19 states 
+      in India and has impacted the lives of over three million children.CRY is one of the top NGOs of India and it addresses children's 
+      critical needs by working with parents, teachers, Anganwadi 
+            </p>
+
+            <div class="social">
+              <a
+                href="https://www.linkedin.com/in/thoriqas/"
+                target="_blank"
+                aria-label="Linkedin"
+                ><span class="fab fa-linkedin"></span
+              ></a>
+              <a
+                href="https://twitter.com/MThoriq_AS"
+                target="_blank"
+                aria-label="twitter"
+                ><span class="fab fa-twitter"></span
+              ></a>
+              <a
+                href="https://www.instagram.com/mthoriq_as/"
+                target="_blank"
+                aria-label="instagram"
+                ><span class="fab fa-instagram"></span
+              ></a>
+              <a
+                href="https://github.com/Muhthoriqas"
+                target="_blank"
+                aria-label="github"
+                ><span class="fa-brands fa-github"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="center box">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">India</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">7995597828</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">childrightandu@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="right box">
+          <h2>Become Member</h2>
+          <div class="content">
+            <form>
+              <div class="email">
+                <div class="text">Name</div>
+                <input type="email" placeholder="Your Name ..." required />
+              </div>
+              <div class="msg">
+                <div class="text">Email</div>
+                <input type="text" placeholder="Your Email..." required />
+              </div>
+              <div class="btn-member">
+                <button type="button">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+      
+        
+    </footer>
+    <!-- Footer End  -->
+
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>
